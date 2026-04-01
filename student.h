@@ -13,7 +13,7 @@ public:
 
 student::student(int node_data, long i, double g, string s) : MU_person(node_data, i, s) {
   gpa = g;
-  cout << "MU student constructor " << gpa << endl;
+  cout << "MU student constructor  " << gpa << endl;
 }
 
 student::~student() {
