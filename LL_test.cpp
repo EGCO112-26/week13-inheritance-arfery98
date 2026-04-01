@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 
     for (i = 1; i < argc; i++) {
         // Create a student object instead of a generic NODE
-        student *s = new student(atoi(argv[i]), 111, 3.5, "StudentName");
+        t = new student(atoi(argv[i]), 111, 3.5, "StudentName");
        // s->display(); // Display student information
         //t = s; // Treat student as a NODE
         A.add_node(t);
