@@ -1,4 +1,4 @@
-#include "LL_CPP/NODE.h"
+#include "NODE.h"
 
 class MU_person : public NODE {
 private:
