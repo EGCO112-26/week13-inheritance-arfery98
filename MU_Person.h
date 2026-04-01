@@ -18,7 +18,7 @@ MU_person::~MU_person() {
 MU_person::MU_person(int node_data, long x, string n) : NODE(node_data) {
   id = x;
   name = n;
-  cout << "MU person constructor " << id << endl;
+  cout << "MU person constructor  " << id << endl;
 }
 
 void MU_person::display_person() {
