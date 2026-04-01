@@ -13,9 +13,9 @@ int main(int argc, char *argv[]) {
         double gpa = atof(argv[i + 1]);
         string name = argv[i + 2];
 
-        student *s = new student(node_data, node_data, gpa, name);
-        s->display(); // Display student information
-        t = s; // Treat student as a NODE
+        t = new student(node_data, node_data, gpa, name);
+        //s->display(); // Display student information
+        //t = s; // Treat student as a NODE
         A.add_node(t);
     }
 
