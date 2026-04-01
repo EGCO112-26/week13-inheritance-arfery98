@@ -22,6 +22,6 @@ student::~student() {
 }
 
 void student::display() {
-  display_person();
+  //display_person();
   cout << "GPA: " << gpa << endl;
 }
