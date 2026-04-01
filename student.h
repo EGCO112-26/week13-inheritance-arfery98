@@ -1,29 +1,27 @@
 #include "MU_Person.h"
 
 
-class student:public MU_person{
+class student : public MU_person{
 private:
-          double gpa; 
+  double gpa; 
 	
 public:
-    student(long=111 ,double=2.5,string="Nattawut");
-    ~student();
-    void display(); // display_person
-   
+  student(int node_data, long id = 111, double gpa = 2.5, string name = "Nattawut");
+  ~student();
+  void display();
 };
 
-student::student(long i, double g,string s){
-// Finish constructor to set all values
-         cout<<"MU student constructor  "<<gpa<<endl;
-         
-  
-}
-student::~student(){
-     cout<<"-------"<<endl;
-     cout<<"student destructor "<<gpa<<endl; 
+student::student(int node_data, long i, double g, string s) : MU_person(node_data, i, s) {
+  gpa = g;
+  cout << "MU student constructor  " << gpa << endl;
 }
 
+student::~student() {
+  cout << "-------" << endl;
+  cout << "student destructor " << gpa << endl;
+}
 
-void student::display(){
-  //Finish Display function
+void student::display() {
+  display_person();
+  cout << "GPA: " << gpa << endl;
 }

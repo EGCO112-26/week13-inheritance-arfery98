@@ -1,22 +1,25 @@
 #include <iostream>
-using namespace std;
+#include <cstdlib>
 #include "student.h"
+#include "LL_CPP/LL.h"
+using namespace std;
 
-int main(){
-MU_Person m;
- 
-	//student m1(6613121,2,"Vivi"),m2(112),m3;
- // student m1(6613118,3.9,"Atom");
-//student m2(6613112),m3,*p;
-  //m1.display(); // id gpa name
-  cout<<endl<<"======="<<endl;
-  //m1.display_person(); //id
+int main(int argc, char *argv[]) {
+    LL A;
+    NODE *t;
 
-//  p=new student(6613265,1.7,"Hok");
- // delete p;
-  
-  return 0;
-   }
+    for (int i = 1; i < argc; i += 3) {
+        int node_data = atoi(argv[i]);
+        double gpa = atof(argv[i + 1]);
+        string name = argv[i + 2];
 
-// Add constructor --> set name 
-// modify display() -->id/name/gpa
+        student *s = new student(node_data, node_data, gpa, name);
+        s->display(); // Display student information
+        t = s; // Treat student as a NODE
+        A.add_node(t);
+    }
+
+    A.show_all(); // Show all nodes
+
+    return 0;
+}
